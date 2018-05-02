@@ -1,4 +1,4 @@
-"","class","sex","age","total","survived"
+"","classification","sex","age","total","survived"
 "1","1st","Male","Child",1,"Yes"
 "2","1st","Male","Child",1,"Yes"
 "3","1st","Male","Child",1,"Yes"
