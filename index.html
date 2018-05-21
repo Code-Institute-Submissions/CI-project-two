@@ -23,37 +23,59 @@
 
 </head>
 
-<body>
-    <h1>Gender on the Titanic</h1>
-   
+<body class="background-image">
 
+    <div id="content">
 
-    <div id="pie-charts">
-    <div id="class-selector"></div>
-    <div id="average-selector"></div>
-    <div id="gender-selector"></div>
-    <div id="age-selector"></div>
-    </div>
-    
-    
-    
-    <div id="total-class-piechart"></div>
-    <div id="total-sex-piechart"></div>
-    <div id="total-age-piechart"></div>
-    <div id="total-survival-piechart"></div>
-
-
-    <div id="class-distribution"></div>
-    <div id="survival-by-class"></div>
-    <div id="survival-by-gender"></div>
-    <div id="survival-by-age"></div>
-    
-  
-
-    <div id="class-balance-rowchart"></div>
-    
-    
+        <header>
+            <div class="iceberg"></div>
+            <div class="title">
+                <h1>Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>
+            </div>
+        </header>
+        <nav>
+            <div class="selector-charts">
+                <div id="class-selector"></div>
+                <div id="average-selector"></div>
+                <div id="gender-selector"></div>
+                <div id="age-selector"></div>
+            </div>
+        </nav>
+        <info-section>
+            <div class="titanic-image-one"></div><img src="images/anchor.jpeg" alt="Image of an anchor." /></div>
     <div class="number-box" id="show-total-onboard"></div>
-     
-     <div id="show-survival-of-class-correlation"></div>
+    <div class="aside-info">
+        <p>RMS Titanic was a British passenger ship which sank in the North Atantic Ocean in the early morning of the 15th of April 1912, after colliding with an iceberg during her maiden voyage from Southampton (UK) to New York City (USA). This tragic occurence
+            resulted in the loss of 1514 souls; attracting world fame and continued interest. The Titanic was the largest vessel on the ocean when it entered service and retains its place as one of the deadliest maritime disasters in modern history, to
+            the present day.
+
+        </p>
+    </div>
+    <div class="titanic-image-two"></div><img src="images/anchor.jpeg" alt="Image of an anchor." /></div>
+    </info-section>
+
+    <pie-chart-section>
+        <div id="total-class-piechart"></div>
+        <div id="total-sex-piechart"></div>
+        <div id="total-age-piechart"></div>
+        <div id="total-survival-piechart"></div>
+    </pie-chart-section>
+
+    <class-section>
+        <div id="class-distribution"></div>
+        <div id="class-balance-rowchart"></div>
+    </class-section>
+    <bar-chart-section>
+        <div id="survival-by-class"></div>
+        <div id="survival-by-gender"></div>
+        <div id="survival-by-age"></div>
+    </bar-chart-section>
+    <!--<div id="show-survival-of-class-correlation"></div>-->
+
+    <footer>
+        <div class="footer">
+            <h1> YOU HAD BETTER BELIEVE IT PILGRIM</h1>
+        </div>
+    </footer>
+    </div>
 </body>

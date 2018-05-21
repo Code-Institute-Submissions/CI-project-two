@@ -1,11 +1,78 @@
-#pie-charts {
+body, html {
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    margin: 0 auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header header header header header"
+    ". nav nav nav nav ."
+    ". info-section info-section info-section info-section ."
+    ". pie-chart-section pie-chart-section pie-chart-section pie-chart-section ."
+    ". class-section class-section ."
+    ". bar-chart-section bar-chart-section bar-chart-section ."
+    "footer footer footer footer footer footer";
+}
+
+#content > * {
+    padding: 50px;
+    background: #3bbced;
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+info-section{
+    grid-area: info-section;
+}
+
+pie-chart-section{
+    grid-area: pie-chart-section;
+}
+
+class-section{
+    grid-area: class-section;
+}
+
+bar-chart-section{
+    grid-area: bar-chart-section;
+}
+
+footer{
+    grid-area: footer;
+}
+
+/*.background-image {*/
+    
+/*    background-image: url("../../images/titanic-bg.jpg");*/
+/*    height: 100%; */
+/*    background-position: top;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+.selector-charts {
 width: 100%;
 display: inline-block;
 	
 }
 
 .number-box {
-    font-size: 64px;
+    font-size: 100px;
     text-align: center;
     line-height: normal;
+}
+
+.iceberg {
+    min-height: 100px;
 }
