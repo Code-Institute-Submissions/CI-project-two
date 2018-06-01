@@ -97,8 +97,9 @@ function show_total_class(ndx) {
     var total_per_class = name_dim.group().reduceSum(dc.pluck('total'));
 
     dc.pieChart('#total-class-piechart')
-        .height(300)
-        .radius(75)
+        .width(200)
+        .height(200)
+        .innerRadius(50)
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_class)
@@ -111,8 +112,9 @@ function show_total_sex(ndx) {
     var total_per_sex = name_dim.group().reduceSum(dc.pluck('total'));
 
     dc.pieChart('#total-sex-piechart')
-        .height(300)
-        .radius(75)
+        .width(200)
+        .height(200)
+        .innerRadius(50)
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_sex)
@@ -124,8 +126,9 @@ function show_total_age(ndx) {
     var total_per_age = name_dim.group().reduceSum(dc.pluck('total'));
 
     dc.pieChart('#total-age-piechart')
-        .height(300)
-        .radius(75)
+        .width(200)
+        .height(200)
+        .innerRadius(50)
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_age)
@@ -137,8 +140,9 @@ function show_total_survival(ndx) {
     var total_per_survival = name_dim.group().reduceSum(dc.pluck('total'));
 
     dc.pieChart('#total-survival-piechart')
-        .height(300)
-        .radius(75)
+        .width(200)
+        .height(200)
+        .innerRadius(50)
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_survival)
@@ -336,7 +340,8 @@ function show_total_onboard(ndx) {
         .valueAccessor(function(d) {
             return d;
         })
-        .group(totalOnboard);
+        .group(totalOnboard)
+        .formatNumber(d3.format(",.0f"));
 }
 
 
