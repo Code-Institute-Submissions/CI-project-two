@@ -1,1 +1,102 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta+Malar:100,200,300,400,500,600,700|Roboto+Slab:100,200,300,400,500,600,700');
+
+
+
+/*-----------------------------------------------------NavBar styles*/
+
+
+        body {
+            font-family: 'Mukta Malar', 'Roboto Slab',  sans-serif !important;
+        }
+
+        .navbar {
+            font-size: 18px;
+            background-color: grey;
+            padding-bottom: 20px;
+        }
+
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+
+        .nav-links,
+        .logo {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main-nav li {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+           margin-bottom: 50px;
+            cursor: pointer;
+            color: pink;
+            font-size: 24px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                height: 70px;
+                align-items: center;
+            }
+
+            .main-nav {
+                display: flex;
+                margin-right: 30px;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .main-nav li {
+                margin: 0;
+            }
+
+            .nav-links {
+                margin-left: 20px;
+                
+            }
+
+            .logo {
+                margin-top: 0;
+            }
+
+            .navbar-toggle {
+                display: none;
+            }
+
+            .logo:hover,
+            .nav-links:hover {
+                color: black;
+            }
+        }
+
+
+/*-----------------------------------------------------Font styles*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Mukta Malar', 'Roboto Slab',  sans-serif !important;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+}
