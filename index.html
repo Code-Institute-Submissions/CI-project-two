@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
 
@@ -24,100 +26,132 @@
 </head>
 
 <body>
-    <div class="background-image">
+    <div class="wrapper">
 
-        <div id="grid-container" class="flex-container">
-            <header class="header-flex ">
-                <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>
-            </header>
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars fa-lg"></i>
+        </span>
+            <a href="#" class="logo">Titanic</a>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-links">PieChart</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-links">RowChart</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-links">BarChart</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-links">Refresh page</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="header-flex ">
+            <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>
+        </header>
 
 
-            <nav class="nav-flex selector-charts">
-                <div id="selector-box-2">
-                    <div><i class=" fa fa-ship" aria-hidden="true"></i></div>
-                    <div id="class-selector"></div>
-                </div>
-                <div id="selector-box-1">
-                    <div><i class=" fa fa-venus-mars" aria-hidden="true"></i></div>
-                    <div id="gender-selector"></div>
-                </div>
-                <div id="selector-box-2">
-                    <div><i class=" fa fa-users" aria-hidden="true"></i></div>
-                    <div id="age-selector"></div>
-                </div>
-                <div id="selector-box-1">
-                    <div><i class=" fa fa-question" aria-hidden="true"></i></div>
-                    <div id="average-selector"></div>
-                </div>
-            </nav>
-            <info-section class="info info-flex">
-                <div class="titanic-image-one">
-                    <img src="images/titanic-portrait.jpeg" alt="Image of the titanic." />
-                </div>
-                <div class="number-box" id="show-total-onboard">
-                </div>
-                <div class="titanic-image-two">
-                    <img src="images/titanic-portrait-copy.jpeg" alt="Image of the titanic." />
-                </div>
-            </info-section>
+        <nav class="nav-flex selector-charts">
+            <div id="selector-box-2">
+                <div><i class=" fa fa-ship" aria-hidden="true"></i></div>
+                <div id="class-selector"></div>
+            </div>
+            <div id="selector-box-1">
+                <div><i class=" fa fa-venus-mars" aria-hidden="true"></i></div>
+                <div id="gender-selector"></div>
+            </div>
+            <div id="selector-box-2">
+                <div><i class=" fa fa-users" aria-hidden="true"></i></div>
+                <div id="age-selector"></div>
+            </div>
+            <div id="selector-box-1">
+                <div><i class=" fa fa-question" aria-hidden="true"></i></div>
+                <div id="average-selector"></div>
+            </div>
+        </nav>
+        <info-section class="info info-flex">
+            <div class="titanic-image-one">
+                <img src="images/titanic-portrait.jpeg" alt="Image of the titanic." />
+            </div>
+            <div class="number-box" id="show-total-onboard">
+            </div>
+            <div class="titanic-image-two">
+                <img src="images/titanic-portrait-copy.jpeg" alt="Image of the titanic." />
+            </div>
+        </info-section>
 
-            <pie-chart-section class="pie-flex">
-                <div class="crew-class-pie">
-                    <h3><strong>Crew & Class</strong></h3>
-                    <div id="total-class-piechart"></div>
-                </div>
-                <div class="sex-pie">
-                    <h3><strong>Gender</strong></h3>
-                    <div id="total-sex-piechart"></div>
-                </div>
-                <div class="age-pie">
-                    <h3><strong>Age Group</strong></h3>
-                    <div id="total-age-piechart"></div>
-                </div>
-                <div class="survival-pie">
-                    <h3><strong>Survived</strong></h3>
-                    <div id="total-survival-piechart"></div>
-                </div>
-            </pie-chart-section>
+        <pie-chart-section class="pie-flex">
+            <div class="crew-class-pie">
+                <h3><strong>Crew & Class</strong></h3>
+                <div id="total-class-piechart"></div>
+            </div>
+            <div class="sex-pie">
+                <h3><strong>Gender</strong></h3>
+                <div id="total-sex-piechart"></div>
+            </div>
+            <div class="age-pie">
+                <h3><strong>Age Group</strong></h3>
+                <div id="total-age-piechart"></div>
+            </div>
+            <div class="survival-pie">
+                <h3><strong>Survived</strong></h3>
+                <div id="total-survival-piechart"></div>
+            </div>
+        </pie-chart-section>
 
-            <class-section class="class-flex">
-                <div class="distribution">
-                    <h4><strong>Gender Across Crew & Class</strong></h4>
-                    <div id="class-distribution"></div>
-                </div>
-                <div class="balance-rowchart">
-                    <h4><strong>Total Persons Per Group</strong></h4>
-                    <div id="class-balance-rowchart"></div>
-                </div>
-            </class-section>
+        <class-section class="class-flex">
+            <div class="distribution">
+                <h4><strong>Gender Across Crew & Class</strong></h4>
+                <div id="class-distribution"></div>
+            </div>
+            <div class="balance-rowchart">
+                <h4><strong>Total Persons Per Group</strong></h4>
+                <div id="class-balance-rowchart"></div>
+            </div>
+        </class-section>
 
-            <bar-chart-section class="bar-flex">
-                <div class="gender-bar">
-                    <h4><strong>Survival By Gender</strong></h4>
-                    <div id="survival-by-gender"></div>
-                </div>
-                <div class="class-bar">
-                    <h4><strong>Survival By Crew & Class</strong></h4>
-                    <div id="survival-by-class"></div>
-                </div>
-                <div class="age-bar">
-                    <h4><strong>Survival By Age Group</strong></h4>
-                    <div id="survival-by-age"></div>
-                </div>
-            </bar-chart-section>
-            <!--<div id="show-survival-of-class-correlation"></div>-->
+        <bar-chart-section class="bar-flex">
+            <div class="gender-bar">
+                <h4><strong>Survival By Gender</strong></h4>
+                <div id="survival-by-gender"></div>
+            </div>
+            <div class="class-bar">
+                <h4><strong>Survival By Crew & Class</strong></h4>
+                <div id="survival-by-class"></div>
+            </div>
+            <div class="age-bar">
+                <h4><strong>Survival By Age Group</strong></h4>
+                <div id="survival-by-age"></div>
+            </div>
+        </bar-chart-section>
+        <!--<div id="show-survival-of-class-correlation"></div>-->
 
-            <footer class="footer-flex">
-                <div class="footer">
-                    <h1> YOU HAD BETTER BELIEVE IT PILGRIM</h1>
-                    <div class="aside-info">
-                        <p>RMS Titanic was a British passenger ship which sank in the North Atantic Ocean in the early morning of the 15th of April 1912, after colliding with an iceberg during her maiden voyage from Southampton (UK) to New York City (USA).
-                            This tragic occurence resulted in the loss of 1514 souls; attracting world fame and continued interest. The Titanic was the largest vessel on the ocean when it entered service and retains its place as one of the deadliest maritime
-                            disasters in modern history, to the present day.
-                        </p>
-                    </div>
+        <footer class="footer-flex">
+            <div class="footer">
+                <h1> YOU HAD BETTER BELIEVE IT PILGRIM</h1>
+                <div class="aside-info">
+                    <p>RMS Titanic was a British passenger ship which sank in the North Atantic Ocean in the early morning of the 15th of April 1912, after colliding with an iceberg during her maiden voyage from Southampton (UK) to New York City (USA). This
+                        tragic occurence resulted in the loss of 1514 souls; attracting world fame and continued interest. The Titanic was the largest vessel on the ocean when it entered service and retains its place as one of the deadliest maritime disasters
+                        in modern history, to the present day.
+                    </p>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     </div>
+    </div>
+
+    <script type="text/javascript">
+        let mainNav = document.getElementById('js-menu');
+        let navBarToggle = document.getElementById('js-navbar-toggle');
+
+        navBarToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
+    </script>
 </body>
