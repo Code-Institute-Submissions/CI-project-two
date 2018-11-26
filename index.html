@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Titanic Survival Rates</title>
-
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
 
@@ -25,39 +26,44 @@
 
 </head>
 
-<body>
+<body data-spy='scroll' data-target='.navbar' data-offset='50'>
+    
     <div class="wrapper">
 
-        <nav class="navbar">
+        <nav class=" navbar navbar-fixed">
             <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars fa-lg"></i>
         </span>
             <a href="#" class="logo">Titanic</a>
             <ul class="main-nav" id="js-menu">
                 <li>
-                    <a href="#" class="nav-links">Home</a>
+                    <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-links">PieChart</a>
+                    <a href="#piecharts" class="nav-link">PieCharts</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-links">RowChart</a>
+                    <a href="#rowchart" class="nav-link">RowChart</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-links">BarChart</a>
+                    <a href="#barcharts" class="nav-link">BarCharts</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-links">Refresh page</a>
+                    <a href="#" class="nav-link">Refresh page</a>
                 </li>
             </ul>
         </nav>
 
-        <header class="header-flex ">
-            <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>
-        </header>
+        <!--<div class="header-flex ">-->
+        <!--    <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>-->
+        <!--</div>-->
 
 
-        <nav class="nav-flex selector-charts">
+        <div id="home" class="nav-flex selector-charts bg-warning">
+            <div><h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1></div>
+           
+            <div><h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1></div>
+           
             <div id="selector-box-2">
                 <div><i class=" fa fa-ship" aria-hidden="true"></i></div>
                 <div id="class-selector"></div>
@@ -65,6 +71,8 @@
             <div id="selector-box-1">
                 <div><i class=" fa fa-venus-mars" aria-hidden="true"></i></div>
                 <div id="gender-selector"></div>
+            </div>
+            <div class="number-box" id="show-total-onboard">
             </div>
             <div id="selector-box-2">
                 <div><i class=" fa fa-users" aria-hidden="true"></i></div>
@@ -74,19 +82,10 @@
                 <div><i class=" fa fa-question" aria-hidden="true"></i></div>
                 <div id="average-selector"></div>
             </div>
-        </nav>
-        <info-section class="info info-flex">
-            <div class="titanic-image-one">
-                <img src="images/titanic-portrait.jpeg" alt="Image of the titanic." />
-            </div>
-            <div class="number-box" id="show-total-onboard">
-            </div>
-            <div class="titanic-image-two">
-                <img src="images/titanic-portrait-copy.jpeg" alt="Image of the titanic." />
-            </div>
-        </info-section>
+        </div>
+        
 
-        <pie-chart-section class="pie-flex">
+        <div id="piecharts" class="pie-flex bg-alert">
             <div class="crew-class-pie">
                 <h3><strong>Crew & Class</strong></h3>
                 <div id="total-class-piechart"></div>
@@ -103,20 +102,20 @@
                 <h3><strong>Survived</strong></h3>
                 <div id="total-survival-piechart"></div>
             </div>
-        </pie-chart-section>
+        </div>
 
-        <class-section class="class-flex">
-            <div class="distribution">
-                <h4><strong>Gender Across Crew & Class</strong></h4>
-                <div id="class-distribution"></div>
-            </div>
+        <div id="rowchart" class="class-flex bg-primary">
             <div class="balance-rowchart">
                 <h4><strong>Total Persons Per Group</strong></h4>
                 <div id="class-balance-rowchart"></div>
             </div>
-        </class-section>
+            <div class="distribution">
+                <h4><strong>Gender Across Crew & Class</strong></h4>
+                <div id="class-distribution"></div>
+            </div>
+        </div>
 
-        <bar-chart-section class="bar-flex">
+        <div id="barcharts" class="bar-flex bg-success">
             <div class="gender-bar">
                 <h4><strong>Survival By Gender</strong></h4>
                 <div id="survival-by-gender"></div>
@@ -129,7 +128,7 @@
                 <h4><strong>Survival By Age Group</strong></h4>
                 <div id="survival-by-age"></div>
             </div>
-        </bar-chart-section>
+        </div>
         <!--<div id="show-survival-of-class-correlation"></div>-->
 
         <footer class="footer-flex">
