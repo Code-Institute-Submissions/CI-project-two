@@ -54,38 +54,34 @@
             </ul>
         </nav>
 
-        <!--<div class="header-flex ">-->
-        <!--    <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>-->
-        <!--</div>-->
+        <div class="header-flex ">
+            <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>
+        </div>
 
 
-        <div id="home" class="nav-flex selector-charts bg-warning">
-            <div><h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1></div>
-           
-            <div><h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1></div>
-           
-            <div id="selector-box-2">
-                <div><i class=" fa fa-ship" aria-hidden="true"></i></div>
+        <div id="home" class="container-selector">
+            <div class="class-selector" id="selector-box-2">
+                <div><i class=" fa fa-ship fa-4x" aria-hidden="true"></i></div>
                 <div id="class-selector"></div>
             </div>
-            <div id="selector-box-1">
-                <div><i class=" fa fa-venus-mars" aria-hidden="true"></i></div>
+            <div class="gender-selector" id="selector-box-1">
+                <div><i class=" fa fa-venus-mars fa-4x" aria-hidden="true"></i></div>
                 <div id="gender-selector"></div>
             </div>
             <div class="number-box" id="show-total-onboard">
             </div>
-            <div id="selector-box-2">
-                <div><i class=" fa fa-users" aria-hidden="true"></i></div>
+            <div class="age-selector" id="selector-box-2">
+                <div><i class=" fa fa-users fa-4x" aria-hidden="true"></i></div>
                 <div id="age-selector"></div>
             </div>
-            <div id="selector-box-1">
-                <div><i class=" fa fa-question" aria-hidden="true"></i></div>
+            <div class="average-selector" id="selector-box-1">
+                <div><i class=" fa fa-question fa-4x" aria-hidden="true"></i></div>
                 <div id="average-selector"></div>
             </div>
         </div>
         
 
-        <div id="piecharts" class="pie-flex bg-alert">
+        <div id="piecharts" class="container-pie bg-alert">
             <div class="crew-class-pie">
                 <h3><strong>Crew & Class</strong></h3>
                 <div id="total-class-piechart"></div>
@@ -104,7 +100,7 @@
             </div>
         </div>
 
-        <div id="rowchart" class="class-flex bg-primary">
+        <div id="rowchart" class="container-row">
             <div class="balance-rowchart">
                 <h4><strong>Total Persons Per Group</strong></h4>
                 <div id="class-balance-rowchart"></div>
@@ -115,7 +111,7 @@
             </div>
         </div>
 
-        <div id="barcharts" class="bar-flex bg-success">
+        <div id="barcharts" class="container-bar">
             <div class="gender-bar">
                 <h4><strong>Survival By Gender</strong></h4>
                 <div id="survival-by-gender"></div>
