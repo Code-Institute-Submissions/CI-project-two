@@ -5,10 +5,17 @@
 
 body,
 html {
+    /*height: 100%;*/
+    /*margin: 0;*/
+    /*text-align: center;*/
+    /*background-color: yellow;*/
     height: 100%;
     margin: 0;
-    text-align: center;
-    background-color: yellow;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
 }
 
 
@@ -133,43 +140,95 @@ a {
     }
 }
 
-/*-----------------------------------------------------Flexbox containers and children*/
+/*-----------------------------------------------------Flexbox parent containers and children*/
+
+/*----------------------------------------------------- Flexbox Number-box*/
+
+.container-number-box {
+    border: 5px solid black;
+    display: flex;
+    /*flex-wrap: wrap;*/
+}
+
+.number-box {
+    /*flex: 1;*/
+    flex-grow: 1;
+    /*min-width: 250px;*/
+    /*height: 150px;*/
+    align-items: center;
+}
+
+/*----------------------------------------------------- Flexbox Selector*/
 
 .container-selector {
     border: 5px solid black;
     display: flex;
     flex-wrap: wrap;
+
+    align-content: space-evenly;
 }
 
 .class-selector {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 180px;
+    height: 150px;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 30px;
+    width: 25%;
 }
 
 .gender-selector {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
-}
-
-.number-box {
-    flex: 3;
-    flex-grow: 1;
-    min-width: 400px
+    min-width: 180px;
+    height: 150px;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 30px;
+    width: 25%;
 }
 
 .age-selector {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 180px;
+    height: 150px;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 30px;
+    width: 25%;
 }
 
 .average-selector {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 180px;
+    height: 150px;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 30px;
+    margin-right: none;
+    width: 25%;
 }
+
+@media(min-width:839px) {
+    .class-selector {
+        padding-left: 100px;
+
+    }
+
+    .gender-selector,
+    .age-selector,
+    .average-selector {
+        padding-left: 50px;
+
+    }
+}
+
+
+/*----------------------------------------------------- Flexbox PieChart*/
 
 .container-pie {
     display: flex;
@@ -201,6 +260,8 @@ a {
     min-width: 250px
 }
 
+/*----------------------------------------------------- Flexbox RowChart*/
+
 .container-row {
     display: flex;
     border: 5px solid pink;
@@ -214,10 +275,12 @@ a {
 }
 
 .distribution {
-    flex: 1; 
+    flex: 1;
     flex-grow: 1;
     min-width: 250px
 }
+
+/*----------------------------------------------------- Flexbox BarChart*/
 
 .container-bar {
     display: flex;
@@ -354,4 +417,68 @@ h6 {
     font-weight: 500;
     /*opacity: .8;*/
     color: black;
+}
+
+
+/*-----------------------------------------------------Parallax styles*/
+
+.parallax-one,
+.parallax-two,
+.parallax-three,
+.parallax-four {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.parallax-one {
+    background-image: url('../../img/titanic_night_time.jpg');
+    min-height: 1200px;
+}
+
+.parallax-two {
+    background-image: url('../../img/titanic_propellers.jpg');
+    min-height: 500px;
+}
+
+.parallax-three {
+    background-image: url('../../img/titanic_wreck_blue.jpg');
+    min-height: 500px;
+}
+
+.parallax-four {
+    background-image: url('../../img/titanic_wreck_brown.jpg');
+    min-height: 500px;
+}
+
+.parallax-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.parallax-text .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.parallax-text .border.trans {
+    background-color: transparent;
+}
+
+@media(max-width:568px) {
+    .parallax-one,
+    .parallax-two,
+    .parallax-three,
+    .parallax-four {
+        background-attachment: scroll;
+    }
 }
