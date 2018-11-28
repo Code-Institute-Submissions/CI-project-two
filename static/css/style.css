@@ -7,15 +7,17 @@ body,
 html {
     /*height: 100%;*/
     /*margin: 0;*/
-    /*text-align: center;*/
+    text-align: left;
     /*background-color: yellow;*/
     height: 100%;
+    width: 100%;
     margin: 0;
+    /*padding: 0;*/
     font-size: 16px;
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
     color: #666;
+    overflow-x: hidden;
 }
 
 
@@ -47,11 +49,17 @@ h6,
     z-index: 100;
     position: fixed;
     width: 100%;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.60;
+
 }
 
 .navbar {
-    font-size: 18px;
-    background-color: grey;
+    font-size: 20px;
+    color: white;
+    font-family: 'Mukta Malar', 'Roboto Slab', sans-serif;
+    /*background-color: grey;*/
     padding-bottom: 20px;
 }
 
@@ -71,7 +79,7 @@ h6,
 /*}*/
 
 a {
-    color: green;
+    color: white;
     text-decoration: none !important;
 }
 
@@ -136,7 +144,7 @@ a {
 
     .logo:hover,
     .nav-link:hover {
-        color: black;
+        color: purple;
     }
 }
 
@@ -145,7 +153,7 @@ a {
 /*----------------------------------------------------- Flexbox Number-box*/
 
 .container-number-box {
-    border: 5px solid black;
+    /*border: 5px solid black;*/
     display: flex;
     /*flex-wrap: wrap;*/
 }
@@ -161,55 +169,24 @@ a {
 /*----------------------------------------------------- Flexbox Selector*/
 
 .container-selector {
-    border: 5px solid black;
+    /*border: 5px solid black;*/
     display: flex;
     flex-wrap: wrap;
-
     align-content: space-evenly;
 }
 
-.class-selector {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 180px;
-    height: 150px;
-    align-items: center;
-    padding-top: 25px;
-    padding-left: 30px;
-    width: 25%;
-}
-
-.gender-selector {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 180px;
-    height: 150px;
-    align-items: center;
-    padding-top: 25px;
-    padding-left: 30px;
-    width: 25%;
-}
-
-.age-selector {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 180px;
-    height: 150px;
-    align-items: center;
-    padding-top: 25px;
-    padding-left: 30px;
-    width: 25%;
-}
-
+.class-selector,
+.gender-selector,
+.age-selector,
 .average-selector {
     flex: 1;
     flex-grow: 1;
     min-width: 180px;
-    height: 150px;
+    min-height: 150px;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 80px;
     padding-left: 30px;
-    margin-right: none;
+    padding-bottom: 40px;
     width: 25%;
 }
 
@@ -232,78 +209,96 @@ a {
 
 .container-pie {
     display: flex;
-    border: 5px solid purple;
     flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
 }
 
-.crew-class-pie {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
-.sex-pie {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
-.age-pie {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
+.crew-class-pie,
+.sex-pie,
+.age-pie,
 .survival-pie {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 260px;
+    min-height: 250px;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    width: 25%;
 }
+
+
 
 /*----------------------------------------------------- Flexbox RowChart*/
 
 .container-row {
     display: flex;
-    border: 5px solid pink;
     flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
 }
 
-.balance-rowchart {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
+.balance-rowchart,
 .distribution {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 350px;
+    min-height: 250px;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    /*width: 50%;*/
+    /*doesnt seem to do anything*/
+    /**/
+}
+
+@media(min-width:839px) {
+
+    .balance-rowchart,
+    .distribution {
+
+        padding-left: 100px;
+
+    }
+
 }
 
 /*----------------------------------------------------- Flexbox BarChart*/
 
 .container-bar {
     display: flex;
-    border: 5px solid orange;
     flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
 }
 
-.gender-bar {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
-.class-bar {
-    flex: 1;
-    flex-grow: 1;
-    min-width: 250px
-}
-
+.gender-bar,
+.class-bar,
 .age-bar {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px
+    min-width: 250px;
+    min-height: 250px;
+    align-items: center;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    width: 33%;
+}
+
+/*----------------------------------------------------- Flexbox BarChart*/
+
+.container-footer {
+    display: flex;
+    /*border: 5px solid orange;*/
+    flex-wrap: wrap;
+}
+
+.footer {
+    flex-grow: 1;
 }
 
 /*-----------------------------------------------------Dc-Chart styles*/
@@ -311,6 +306,8 @@ a {
 .number-box {
     border: 100px;
     font-size: 100px;
+    font-family: 'Mukta Malar', sans-serif;
+    font-weight: 500;
     padding: 5px 1px;
     text-align: center;
     line-height: normal;
@@ -318,7 +315,7 @@ a {
 
 .dc-chart .axis text {
     fill-opacity: .8;
-    fill: white;
+    fill: black;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
@@ -335,7 +332,7 @@ a {
 
 .dc-chart g.row text {
     fill-opacity: .8;
-    fill: white;
+    fill: black;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
@@ -344,7 +341,7 @@ a {
 
 .dc-chart g.dc-legend-item text {
     fill-opacity: .8;
-    fill: white;
+    fill: black;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
@@ -377,14 +374,19 @@ h6 {
     font-weight: 500;
 }
 
-.selector-charts i {
-    font-size: 70px;
-    fill-opacity: .6;
-    color: yellow;
-    margin: 8px 0;
-    float: inherit;
+/*.selector-charts i {*/
 
-}
+/*    font-size: 70px;*/
+
+/*    fill-opacity: .6;*/
+
+/*    color: yellow;*/
+
+/*    margin: 8px 0;*/
+
+/*    float: inherit;*/
+
+/*}*/
 
 /*#selector-box-1 {*/
 
@@ -414,6 +416,7 @@ h6 {
 
 .footer {
     font-family: 'Mukta Malar', sans-serif;
+    padding: 0px 10px;
     font-weight: 500;
     /*opacity: .8;*/
     color: black;
@@ -456,7 +459,7 @@ h6 {
 
 .parallax-text {
     position: absolute;
-    top: 50%;
+    top: 10%;
     width: 100%;
     text-align: center;
     font-size: 27px;
@@ -480,5 +483,98 @@ h6 {
     .parallax-three,
     .parallax-four {
         background-attachment: scroll;
+    }
+}
+
+
+/*----------------------------------------------------- Flexbox Media Queries*/
+
+/*----------------------------------------------------- Flexbox Selectors*/
+
+/*@media(max-width:568px) {*/
+
+/*    .class-selector,*/
+/*    .gender-selector,*/
+/*    .age-selector,*/
+/*    .average-selector {*/
+/*        flex: 1;*/
+/*        flex-grow: 1;*/
+        /*min-width: 180px;*/
+        /*min-height: 150px;*/
+        /*align-items: center;*/
+        /*padding-top: 80px;*/
+        /*padding-left: 30px;*/
+        /*padding-bottom: 40px;*/
+        /*width: 25%;*/
+/*    }*/
+
+/*    .gender-selector,*/
+/*    .age-selector,*/
+/*    .average-selector {*/
+        /*padding-left: 50px;*/
+/*    }*/
+    /*----------------------------------------------------- Flexbox PieChart*/
+/*    .crew-class-pie,*/
+/*    .sex-pie,*/
+/*    .age-pie,*/
+/*    .survival-pie {*/
+/*        flex: 1;*/
+/*        flex-grow: 1;*/
+        /*min-width: 250px;*/
+        /*min-height: 250px;*/
+        /*align-items: center;*/
+        /*padding-top: 80px;*/
+        /*padding-left: 30px;*/
+        /*padding-bottom: 20px;*/
+        /*width: 25%;*/
+/*    }*/
+
+
+
+    /*----------------------------------------------------- Flexbox RowChart*/
+/*    .balance-rowchart,*/
+/*    .distribution {*/
+/*        flex: 1;*/
+/*        flex-grow: 1;*/
+        /*min-width: 250px;*/
+        /*min-height: 250px;*/
+        /*align-items: center;*/
+        /*padding-top: 80px;*/
+        /*padding-left: 30px;*/
+        /*padding-bottom: 20px;*/
+/*    }*/
+
+    /*----------------------------------------------------- Flexbox BarChart*/
+/*    .gender-bar,*/
+/*    .class-bar,*/
+/*    .age-bar {*/
+/*        flex: 1;*/
+/*        flex-grow: 1;*/
+        /*min-width: 250px;*/
+        /*min-height: 250px;*/
+        /*align-items: center;*/
+        /*padding-top: 60px;*/
+        /*padding-left: 30px;*/
+        /*padding-bottom: 20px;*/
+        /*width: 33%;*/
+/*    }*/
+
+/*}*/
+
+
+@media(max-width:568px) {
+    .crew-class-pie,
+    .sex-pie,
+    .age-pie,
+    .survival-pie {
+        flex: 1;
+        flex-grow: 1;
+        min-width: 250px;
+        min-height: 250px;
+        align-items: center;
+        padding-top: 80px;
+        padding-left: 90px;
+        padding-bottom: 20px;
+        width: 25%;
     }
 }

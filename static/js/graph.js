@@ -180,8 +180,8 @@ function show_class_distribution(ndx) {
     var crewByGender = classByGender(dim, "Crew");
 
     dc.barChart("#class-distribution")
-        .width(300)
-        .height(225)
+        .width(360)
+        .height(270)
         .dimension(dim)
         .group(firstByGender, "1st Class %")
         .stack(secondByGender, "2nd Class %")
@@ -199,7 +199,7 @@ function show_class_distribution(ndx) {
         .xUnits(dc.units.ordinal)
         .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
         // .xAxisLabel("Total Percentage of Passengers")
-        .legend(dc.legend().x(210).y(15).itemHeight(12).gap(5))
+        .legend(dc.legend().x(266).y(19).itemHeight(13).gap(10))
         .margins({ top: 10, right: 100, bottom: 30, left: 30 });
 
 }
@@ -319,8 +319,8 @@ function show_class_balance_rowchart(ndx) {
     var group = dim.group();
 
     dc.rowChart("#class-balance-rowchart")
-        .width(300)
-        .height(220)
+        .width(360)
+        .height(270)
         .dimension(dim)
         .group(group)
         .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
