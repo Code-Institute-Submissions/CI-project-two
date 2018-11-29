@@ -103,8 +103,7 @@ function show_total_class(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_class)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']));
-        
+        .colors(d3.scale.ordinal().range(['#75251F', '#3B2810', '#1F4B75', '#1F7561']));
 }
 
 function show_total_sex(ndx) {
@@ -118,7 +117,8 @@ function show_total_sex(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_sex)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']));
+        .colors(d3.scale.ordinal().range(['#1F4B75','#75251F']));
+
 }
 
 function show_total_age(ndx) {
@@ -132,7 +132,8 @@ function show_total_age(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_age)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']));
+        .colors(d3.scale.ordinal().range(['#1F7561','#75251F']));
+
 }
 
 function show_total_survival(ndx) {
@@ -146,7 +147,8 @@ function show_total_survival(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_survival)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']));;
+        .colors(d3.scale.ordinal().range(['#3B2810','#1F7561']));
+
 }
 
 function show_class_distribution(ndx) {
@@ -197,7 +199,7 @@ function show_class_distribution(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
+        .colors(d3.scale.ordinal().range(['#6AA9F6', '#F67D6A', '#F6F16A', '#86F66A']))
         // .xAxisLabel("Total Percentage of Passengers")
         .legend(dc.legend().x(266).y(19).itemHeight(13).gap(10))
         .margins({ top: 10, right: 100, bottom: 30, left: 30 });
@@ -235,7 +237,7 @@ function show_survival_by_class(ndx) {
         .stack(survivalByClassNo, "Perished")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
+        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
     // .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
@@ -270,7 +272,7 @@ function show_survival_by_gender(ndx) {
         .stack(survivalByGenderNo, "Perished")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
+        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
     // .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
@@ -305,7 +307,7 @@ function show_survival_by_age(ndx) {
         .stack(survivalByAgeNo, "Perished")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
+        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
         .legend(dc.legend().x(210).y(15).itemHeight(12).gap(5));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
@@ -323,7 +325,7 @@ function show_class_balance_rowchart(ndx) {
         .height(270)
         .dimension(dim)
         .group(group)
-        .colors(d3.scale.ordinal().range(['#56A5EC', '#ED9C55', '#3EA99F', '#E67451']))
+        .colors(d3.scale.ordinal().range(['#86F66A', '#F6F16A', '#6AA9F6', '#F67D6A']))
         .xAxis().ticks(4);
 
 }
