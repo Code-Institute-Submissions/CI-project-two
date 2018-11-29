@@ -42,6 +42,13 @@ h6,
     color: inherit;
 }
 
+
+/*-----------------------------------------------------FontAwesome styles*/
+
+.icon, i.fa {
+    padding-bottom: 5px;
+}
+
 /*-----------------------------------------------------NavBar styles*/
 
 .navbar-fixed {
@@ -49,7 +56,7 @@ h6,
     z-index: 100;
     position: fixed;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: black;
     opacity: 0.60;
 
@@ -184,10 +191,38 @@ a {
     min-width: 180px;
     min-height: 150px;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 40px;
     width: 25%;
+}
+
+@media(max-width:567px) {
+    .class-selector,
+    .gender-selector,
+    .age-selector,
+    .average-selector {
+        flex: 1;
+        flex-grow: 1;
+        min-width: 250px;
+        min-height: 150px;
+        align-items: center;
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        width: 25%;
+
+        /*    flex: 1;*/
+        /*    flex-grow: 1;*/
+        /*    min-width: 250px;*/
+        /*    min-height: 250px;*/
+        /*    align-items: center;*/
+        /*    padding-top: 25px;*/
+        /*    padding-left: 150px;*/
+        /*    padding-bottom: 10px;*/
+        /*    width: 25%;*/
+        /*}*/
+    }
 }
 
 @media(min-width:839px) {
@@ -195,14 +230,13 @@ a {
         padding-left: 100px;
 
     }
-
     .gender-selector,
     .age-selector,
     .average-selector {
         padding-left: 50px;
-
     }
 }
+
 
 
 /*----------------------------------------------------- Flexbox PieChart*/
@@ -223,10 +257,42 @@ a {
     min-width: 260px;
     min-height: 250px;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 20px;
     width: 25%;
+}
+
+@media(max-width:567px) {
+    .crew-class-pie,
+    .sex-pie,
+    .age-pie,
+    .survival-pie {
+        flex: 1;
+        flex-grow: 1;
+        min-width: 250px;
+        min-height: 250px;
+        align-items: center;
+        padding-top: 40px;
+        padding-left: 90px;
+        padding-bottom: 20px;
+        width: 25%;
+    }
+}
+
+
+@media(min-width:800px) {
+
+    .crew-class-pie,
+    .sex-pie,
+    .age-pie,
+    .survival-pie {
+
+        min-width: 300px;
+        padding-left: 90px;
+
+    }
+
 }
 
 
@@ -247,7 +313,7 @@ a {
     min-width: 350px;
     min-height: 250px;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 20px;
     /*width: 50%;*/
@@ -283,10 +349,22 @@ a {
     min-width: 250px;
     min-height: 250px;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 20px;
     width: 33%;
+}
+
+@media(min-width:800px) {
+
+    .gender-bar,
+    .class-bar,
+    .age-bar {
+
+        min-width: 300px;
+
+    }
+
 }
 
 /*----------------------------------------------------- Flexbox BarChart*/
@@ -302,6 +380,13 @@ a {
 }
 
 /*-----------------------------------------------------Dc-Chart styles*/
+
+.select,
+.dc-select-menu {
+    border: 2px solid #666666;
+    width:100px;
+    height:24px;
+}
 
 .number-box {
     border: 100px;
@@ -438,8 +523,8 @@ h6 {
 }
 
 .parallax-one {
-    background-image: url('../../img/titanic_night_time.jpg');
-    min-height: 1200px;
+    background-image: url('../../img/titanic_at_night.jpg');
+    min-height: 800px;
 }
 
 .parallax-two {
@@ -448,12 +533,12 @@ h6 {
 }
 
 .parallax-three {
-    background-image: url('../../img/titanic_wreck_blue.jpg');
+    background-image: url('../../img/titanic_at_sea.jpg');
     min-height: 500px;
 }
 
 .parallax-four {
-    background-image: url('../../img/titanic_wreck_brown.jpg');
+    background-image: url('../../img/titanic_underwater_wreck.jpg');
     min-height: 500px;
 }
 
@@ -494,87 +579,123 @@ h6 {
 /*@media(max-width:568px) {*/
 
 /*    .class-selector,*/
+
 /*    .gender-selector,*/
+
 /*    .age-selector,*/
+
 /*    .average-selector {*/
+
 /*        flex: 1;*/
+
 /*        flex-grow: 1;*/
-        /*min-width: 180px;*/
-        /*min-height: 150px;*/
-        /*align-items: center;*/
-        /*padding-top: 80px;*/
-        /*padding-left: 30px;*/
-        /*padding-bottom: 40px;*/
-        /*width: 25%;*/
+
+/*min-width: 180px;*/
+
+/*min-height: 150px;*/
+
+/*align-items: center;*/
+
+/*padding-top: 80px;*/
+
+/*padding-left: 30px;*/
+
+/*padding-bottom: 40px;*/
+
+/*width: 25%;*/
+
 /*    }*/
 
 /*    .gender-selector,*/
+
 /*    .age-selector,*/
+
 /*    .average-selector {*/
-        /*padding-left: 50px;*/
+
+/*padding-left: 50px;*/
+
 /*    }*/
-    /*----------------------------------------------------- Flexbox PieChart*/
+
+/*----------------------------------------------------- Flexbox PieChart*/
+
 /*    .crew-class-pie,*/
+
 /*    .sex-pie,*/
+
 /*    .age-pie,*/
+
 /*    .survival-pie {*/
+
 /*        flex: 1;*/
+
 /*        flex-grow: 1;*/
-        /*min-width: 250px;*/
-        /*min-height: 250px;*/
-        /*align-items: center;*/
-        /*padding-top: 80px;*/
-        /*padding-left: 30px;*/
-        /*padding-bottom: 20px;*/
-        /*width: 25%;*/
+
+/*min-width: 250px;*/
+
+/*min-height: 250px;*/
+
+/*align-items: center;*/
+
+/*padding-top: 80px;*/
+
+/*padding-left: 30px;*/
+
+/*padding-bottom: 20px;*/
+
+/*width: 25%;*/
+
 /*    }*/
 
+/*----------------------------------------------------- Flexbox RowChart*/
 
-
-    /*----------------------------------------------------- Flexbox RowChart*/
 /*    .balance-rowchart,*/
+
 /*    .distribution {*/
+
 /*        flex: 1;*/
+
 /*        flex-grow: 1;*/
-        /*min-width: 250px;*/
-        /*min-height: 250px;*/
-        /*align-items: center;*/
-        /*padding-top: 80px;*/
-        /*padding-left: 30px;*/
-        /*padding-bottom: 20px;*/
+
+/*min-width: 250px;*/
+
+/*min-height: 250px;*/
+
+/*align-items: center;*/
+
+/*padding-top: 80px;*/
+
+/*padding-left: 30px;*/
+
+/*padding-bottom: 20px;*/
+
 /*    }*/
 
-    /*----------------------------------------------------- Flexbox BarChart*/
+/*----------------------------------------------------- Flexbox BarChart*/
+
 /*    .gender-bar,*/
+
 /*    .class-bar,*/
+
 /*    .age-bar {*/
+
 /*        flex: 1;*/
+
 /*        flex-grow: 1;*/
-        /*min-width: 250px;*/
-        /*min-height: 250px;*/
-        /*align-items: center;*/
-        /*padding-top: 60px;*/
-        /*padding-left: 30px;*/
-        /*padding-bottom: 20px;*/
-        /*width: 33%;*/
+
+/*min-width: 250px;*/
+
+/*min-height: 250px;*/
+
+/*align-items: center;*/
+
+/*padding-top: 60px;*/
+
+/*padding-left: 30px;*/
+
+/*padding-bottom: 20px;*/
+
+/*width: 33%;*/
+
 /*    }*/
 
 /*}*/
-
-
-@media(max-width:568px) {
-    .crew-class-pie,
-    .sex-pie,
-    .age-pie,
-    .survival-pie {
-        flex: 1;
-        flex-grow: 1;
-        min-width: 250px;
-        min-height: 250px;
-        align-items: center;
-        padding-top: 80px;
-        padding-left: 90px;
-        padding-bottom: 20px;
-        width: 25%;
-    }
-}
