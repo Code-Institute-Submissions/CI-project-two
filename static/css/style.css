@@ -39,15 +39,16 @@ h6,
     font-family: 'Mukta Malar', 'Roboto Slab', sans-serif;
     font-weight: 400;
     line-height: 1.1;
-    color: 	#fafafa;
+    color: #fafafa;
 }
 
 
 /*-----------------------------------------------------FontAwesome styles*/
 
-.icon, i.fa {
+.icon,
+i.fa {
     padding-bottom: 5px;
-    color:rgb(0, 24, 6, 0.7);
+    color: rgb(0, 24, 6, 0.7);
 }
 
 /*-----------------------------------------------------NavBar styles*/
@@ -158,11 +159,12 @@ a {
 
 /*----------------------------------------------------- Section styles*/
 
-.section-style-one{
-  background-color: rgb(0, 24, 6, 0.7);
+.section-style-one {
+    background-color: rgb(0, 24, 6, 0.7);
 }
-.section-style-two{
-  background-color: rgb(38, 38, 38, 0.9);
+
+.section-style-two {
+    background-color: rgb(38, 38, 38, 0.9);
 }
 
 
@@ -182,16 +184,16 @@ a {
     flex-grow: 1;
     /*min-width: 250px;*/
     /*height: 150px;*/
-    align-items: center;
+    /*align-items: center;*/
+    /*    justify-content: space-around;*/
 }
 
 /*----------------------------------------------------- Flexbox Selector*/
 
 .container-selector {
-    /*border: 5px solid black;*/
     display: flex;
     flex-wrap: wrap;
-    align-content: space-evenly;
+    /*    justify-content: space-around;*/
 }
 
 .class-selector,
@@ -202,44 +204,58 @@ a {
     flex-grow: 1;
     min-width: 180px;
     min-height: 150px;
-    align-items: center;
+
     padding-top: 40px;
-    padding-left: 30px;
+    padding-left: 50px;
     padding-bottom: 40px;
-    width: 25%;
+    /*width: 23%;*/
 }
 
-@media(max-width:567px) {
+@media(max-width:350px) {
     .class-selector,
     .gender-selector,
     .age-selector,
     .average-selector {
-        flex: 1;
-        flex-grow: 1;
-        min-width: 250px;
-        min-height: 150px;
-        align-items: center;
-        padding-top: 80px;
-        padding-left: 50px;
-        padding-bottom: 50px;
-        width: 25%;
+        min-width: 140px;
+        min-height: 120px;
+        padding-left: 30px;
+    }
 
-        /*    flex: 1;*/
-        /*    flex-grow: 1;*/
-        /*    min-width: 250px;*/
-        /*    min-height: 250px;*/
-        /*    align-items: center;*/
-        /*    padding-top: 25px;*/
-        /*    padding-left: 150px;*/
-        /*    padding-bottom: 10px;*/
-        /*    width: 25%;*/
-        /*}*/
+}
+
+
+
+@media only screen and (min-width: 351px) and (max-width: 567px) {
+    .class-selector,
+    .gender-selector,
+    .age-selector,
+    .average-selector {
+
+
+        padding-top: 60px;
+        padding-left: 35px;
+        padding-bottom: 60px;
+        width: 23%;
     }
 }
 
-@media(min-width:839px) {
-    .class-selector {
+
+@media only screen and (min-width: 568px) and (max-width: 991px) {
+    .class-selector,
+    .gender-selector,
+    .age-selector,
+    .average-selector {
+
+        min-width: 283px;
+        padding-top: 20px;
         padding-left: 100px;
+        padding-bottom: 40px;
+    }
+}
+
+@media(min-width:992px) {
+    .class-selector {
+        padding-left: 90px;
 
     }
     .gender-selector,
@@ -256,8 +272,7 @@ a {
 .container-pie {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    height: 100%;
+    /*justify-content: space-around;*/
 }
 
 .crew-class-pie,
@@ -266,79 +281,154 @@ a {
 .survival-pie {
     flex: 1;
     flex-grow: 1;
-    min-width: 260px;
+    min-width: 270px;
     min-height: 250px;
-    align-items: center;
     padding-top: 40px;
-    padding-left: 30px;
-    padding-bottom: 20px;
-    width: 25%;
+    padding-left: 70px;
+    padding-bottom: 33px;
+    width: 23%;
 }
 
-@media(max-width:567px) {
+@media(max-width:350px) {
+
     .crew-class-pie,
     .sex-pie,
     .age-pie,
     .survival-pie {
-        flex: 1;
-        flex-grow: 1;
-        min-width: 250px;
-        min-height: 250px;
-        align-items: center;
-        padding-top: 40px;
-        padding-left: 90px;
-        padding-bottom: 20px;
-        width: 25%;
+
+        padding-left: 60px;
+        padding-bottom: 33px;
+
+
     }
 }
 
-
-@media(min-width:800px) {
+@media only screen and (min-width: 351px) and (max-width: 567px) {
 
     .crew-class-pie,
     .sex-pie,
     .age-pie,
     .survival-pie {
 
+        padding-left: 90px;
+        padding-bottom: 50px;
+
+
+    }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 820px) {
+
+    .crew-class-pie,
+    .sex-pie,
+    .age-pie,
+    .survival-pie {
         min-width: 300px;
-        padding-left: 90px;
-
+        min-height: 180px;
+        padding-left: 60px;
+        /*width: 46%;*/
     }
-
 }
 
+@media only screen and (min-width: 821px) and (max-width: 1100px) {
 
+    .crew-class-pie,
+    .sex-pie,
+    .age-pie,
+    .survival-pie {
+
+        padding-left: 130px;
+        padding-bottom: 50px;
+        min-width: 400px;
+        min-height: 300px;
+
+    }
+}
 
 /*----------------------------------------------------- Flexbox RowChart*/
 
 .container-row {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    height: 100%;
 }
+
 
 .balance-rowchart,
 .distribution {
     flex: 1;
     flex-grow: 1;
-    min-width: 350px;
+    min-width: 200px;
     min-height: 250px;
-    align-items: center;
     padding-top: 40px;
-    padding-left: 30px;
-    padding-bottom: 20px;
-    /*width: 50%;*/
-    /*doesnt seem to do anything*/
-    /**/
+    padding-left: 5px;
+    padding-bottom: 50px;
 }
 
-@media(min-width:839px) {
+/*@media only screen and (min-width: 0px) and (max-width: 350px) {*/
+
+/*    .balance-rowchart,*/
+
+/*    .distribution {*/
+
+/*        padding-left: 10px;*/
+
+/*        padding-bottom: 33px;*/
+
+/*    }*/
+
+/*}*/
+
+@media only screen and (min-width: 380px) and (max-width: 641px) {
+
+    .balance-rowchart,
+
+    .distribution {
+        min-width: 350px;
+        padding-left: 15px;
+
+        padding-bottom: 30px;
+
+    }
+
+}
+
+/*@media only screen and (min-width: 566px) and (max-width: 700px) {*/
+
+/*    .balance-rowchart,*/
+
+/*    .distribution {*/
+
+/*        min-width: 300px;*/
+
+/*        min-height: 250px;*/
+
+/*        padding-left: 20px;*/
+
+/*    }*/
+
+/*}*/
+
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
 
     .balance-rowchart,
     .distribution {
 
-        padding-left: 100px;
+        padding-left: 50px;
+        padding-bottom: 50px;
+        min-width: 400px;
+        min-height: 300px;
+
+    }
+}
+
+@media(min-width:1101px) {
+    .balance-rowchart,
+    .distribution {
+
+        padding-left: 110px;
+        padding-bottom: 50px;
+        min-width: 500px;
+        min-height: 400px;
 
     }
 
@@ -349,37 +439,77 @@ a {
 .container-bar {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    height: 100%;
+    /*justify-content: space-around;*/
+    /*height: 100%;*/
 }
+
 
 .gender-bar,
 .class-bar,
 .age-bar {
     flex: 1;
     flex-grow: 1;
-    min-width: 250px;
+    min-width: 270px;
     min-height: 250px;
-    align-items: center;
     padding-top: 40px;
-    padding-left: 30px;
-    padding-bottom: 20px;
-    width: 33%;
+    padding-left: 70px;
+    padding-bottom: 33px;
+    width: 23%;
 }
 
-@media(min-width:800px) {
+@media(max-width:350px) {
 
     .gender-bar,
     .class-bar,
     .age-bar {
 
-        min-width: 300px;
+        padding-left: 60px;
+        padding-bottom: 33px;
+
 
     }
-
 }
 
-/*----------------------------------------------------- Flexbox BarChart*/
+@media only screen and (min-width: 351px) and (max-width: 567px) {
+
+    .gender-bar,
+    .class-bar,
+    .age-bar {
+
+        padding-left: 90px;
+        padding-bottom: 50px;
+
+
+    }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 820px) {
+
+    .gender-bar,
+    .class-bar,
+    .age-bar {
+        min-width: 300px;
+        min-height: 180px;
+        padding-left: 60px;
+        /*width: 46%;*/
+    }
+}
+
+@media only screen and (min-width: 821px) and (max-width: 1100px) {
+
+    .gender-bar,
+    .class-bar,
+    .age-bar {
+
+        padding-left: 130px;
+        padding-bottom: 50px;
+        min-width: 400px;
+        min-height: 300px;
+
+    }
+}
+
+/*----------------------------------------------------- Flexbox Footer*/
 
 .container-footer {
     display: flex;
@@ -396,8 +526,8 @@ a {
 .select,
 .dc-select-menu {
     border: 2px solid rgb(0, 24, 6, 0.7);
-    width:100px;
-    height:24px;
+    width: 100px;
+    height: 24px;
 }
 
 .number-box {
@@ -453,8 +583,7 @@ a {
     font-weight: 500;
 }
 
-.dc-chart
-p,
+.dc-chart p,
 h1,
 h2,
 h3,
@@ -517,7 +646,14 @@ h6 {
     font-family: 'Mukta Malar', sans-serif;
     padding: 0px 10px;
     font-weight: 500;
-    /*opacity: .8;*/
+    text: black;
+    text-align: center;
+    color: black;
+}
+
+.footer-text{
+    text: black;
+    text-align: center;
     color: black;
 }
 
@@ -525,7 +661,9 @@ h6 {
 /*-----------------------------------------------------Parallax styles*/
 
 /*.title-style{*/
+
 /*    color: #fafafa !important;*/
+
 /*}*/
 
 .parallax-one,
