@@ -11,8 +11,11 @@
     <title>Titanic Survival Rates</title>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
@@ -30,52 +33,50 @@
 
     <div class="wrapper">
 
+        <!-- NavBars -->
         <nav class=" navbar navbar-fixed">
             <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars fa-lg"></i>
         </span>
-            <a href="#" class="logo">Titanic</a>
+            <a href="#titanic" class="logo"><strong>Titanic</strong></a>
             <ul class="main-nav" id="js-menu">
                 <li>
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#selectors" class="nav-link"><strong>Selectors</strong></a>
                 </li>
                 <li>
-                    <a href="#piecharts" class="nav-link">PieCharts</a>
+                    <a href="#piecharts" class="nav-link"><strong>PieCharts</strong></a>
                 </li>
                 <li>
-                    <a href="#rowchart" class="nav-link">RowChart</a>
+                    <a href="#rowchart" class="nav-link"><strong>RowChart</strong></a>
                 </li>
                 <li>
-                    <a href="#barcharts" class="nav-link">BarCharts</a>
+                    <a href="#barcharts" class="nav-link"><strong>BarCharts</strong></a>
                 </li>
                 <li>
-                    <!--<button class="nav-link"  onclick="location.reload()">Refresh</button>-->
                     <a href="#" class="nav-link" onclick="location.reload()">Refresh page</a>
                 </li>
             </ul>
         </nav>
 
-        <!--<div class="header-flex ">-->
-        <!--    <h1 class="title">Titanic: Crew and Classes, Survivors and Victims Visualisation</h1>-->
-        <!--</div>-->
-        <div  class="parallax-one">
+        <!-- Parallax Image -->
+        <div id="titanic" class="parallax-one">
             <div class="parallax-text">
-                <span class="title-style">
+                <span>
                   <h2>Titanic: Crew and Classes, Survivors and Victims Visualisation.
                 </h2>
                 <br>
                  <h2>Current Count:</h2>
                 </span>
                 <div class="container-number-box">
-                <div class="number-box" id="show-total-onboard">
+                    <div class="number-box" id="show-total-onboard">
+                    </div>
+
                 </div>
-                
             </div>
-                 </div>
         </div>
 
-
-        <div id="home" class="container-selector">
+        <!-- Selectors -->
+        <div id="selectors" class="container-selector">
             <div class="class-selector" id="selector-box-2">
                 <div><i class="icon fa fa-anchor fa-5x" aria-hidden="true"></i></div>
                 <div id="class-selector"></div>
@@ -93,7 +94,8 @@
                 <div id="average-selector"></div>
             </div>
         </div>
-
+        
+        <!-- Parallax Image -->
         <div class="parallax-two">
             <div class="parallax-text">
                 <span class="border trans">
@@ -101,7 +103,8 @@
                 </span>
             </div>
         </div>
-
+        
+        <!-- PieCharts -->
         <div id="piecharts" class="container-pie section-style-two">
             <div class="crew-class-pie">
                 <h3><strong>Crew & Class</strong></h3>
@@ -121,6 +124,7 @@
             </div>
         </div>
 
+        <!-- Parallax Image -->
         <div class="parallax-three">
             <div class="parallax-text">
                 <span class="border trans">
@@ -128,7 +132,8 @@
                 </span>
             </div>
         </div>
-
+        
+        <!-- RowChart & Distribution -->
         <div id="rowchart" class="container-row section-style-one">
             <div class="balance-rowchart">
                 <h4><strong>Total Persons Per Group</strong></h4>
@@ -139,7 +144,8 @@
                 <div id="class-distribution"></div>
             </div>
         </div>
-
+        
+        <!-- Parallax Image -->
         <div class="parallax-four">
             <div class="parallax-text">
                 <span class="border trans">
@@ -147,7 +153,8 @@
                 </span>
             </div>
         </div>
-
+        
+        <!-- BarCharts -->
         <div id="barcharts" class="container-bar section-style-two">
             <div class="gender-bar">
                 <h4><strong>Survival By Gender</strong></h4>
@@ -162,11 +169,11 @@
                 <div id="survival-by-age"></div>
             </div>
         </div>
-        <!--<div id="show-survival-of-class-correlation"></div>-->
 
-        <footer class="container-footer">
-            <div class="footer">
-                <h1 class="footer-text"> YOU HAD BETTER BELIEVE IT PILGRIM</h1>
+        <!-- Titanic info -->
+        <div class="container-info">
+            <div class="info">
+                <h1 class="info-text"> YOU HAD BETTER BELIEVE IT PILGRIM</h1>
                 <div>
                     <p>RMS Titanic was a British passenger ship which sank in the North Atantic Ocean in the early morning of the 15th of April 1912, after colliding with an iceberg during her maiden voyage from Southampton (UK) to New York City (USA). This
                         tragic occurence resulted in the loss of 1514 souls; attracting world fame and continued interest. The Titanic was the largest vessel on the ocean when it entered service and retains its place as one of the deadliest maritime disasters
@@ -174,14 +181,34 @@
                     </p>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
-    </div>
+
+    <!-- Footer one -->
+    <footer class="container-footer-one section-style-one">
+        <div class="footer">
+            <div class="footer-one">
+                <a href="https://en.wikipedia.org/wiki/RMS_Titanic" target="_blank" <i class="fab fa-wikipedia-w"></i></a><strong>  Titanic Wiki</strong>
+                <span style="color:#4C5D50">------------</span>
+                <span>Copyright &copy; 2018, Mark Wilde</span>
+                <span style="color:#4C5D50">-----------</span>
+                <a href="https://github.com/markwilde33" target="_blank" <i class="fab fa-github-square"></i></a><strong>  Github</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer two -->
+    <footer class="container-footer-two section-style-one">
+        <div class="footer footer-text ">
+            <p><a href="https://en.wikipedia.org/wiki/RMS_Titanic" target="_blank" <i class="fab fa-wikipedia-w"></i></a><strong> Titanic Wiki</strong></p>
+            <p>Copyright &copy; 2018, Mark Wilde</p>
+            <p><a href="https://github.com/markwilde33/CI-project-two" target="_blank" <i class="fab fa-github-square"></i></a><strong> Github</strong></p>
+        </div>
+    </footer>
 
     <script type="text/javascript">
         let mainNav = document.getElementById('js-menu');
         let navBarToggle = document.getElementById('js-navbar-toggle');
-
         navBarToggle.addEventListener('click', function() {
             mainNav.classList.toggle('active');
         });
