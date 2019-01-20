@@ -1,20 +1,19 @@
 queue()
+    /*Include the Titanic csv file*/ 
     .defer(d3.csv, "data/Titanic.csv")
     .await(makeGraphs);
 
 function makeGraphs(error, titanicData) {
+    /*Create a crossfilter instance*/ 
     var ndx = crossfilter(titanicData);
 
     titanicData.forEach(function(d) {
         d.total = parseInt(d.total);
     });
-
+    /*Call all functions*/ 
     show_class_selector(ndx);
-
     show_gender_selector(ndx);
-
     show_average_selector(ndx);
-
     show_age_selector(ndx);
     show_class_distribution(ndx);
     show_total_class(ndx);
@@ -26,76 +25,50 @@ function makeGraphs(error, titanicData) {
     show_survival_by_age(ndx);
     show_class_balance_rowchart(ndx);
     show_total_onboard(ndx);
-    // show_survival_of_class_correlation(ndx);
     dc.renderAll();
 }
 
-
-//============================================//
-
-
+/*selectors for displaying information for classes, gender, survival rates and age groups*/
 
 function show_class_selector(ndx) {
     dim = ndx.dimension(dc.pluck('classification'));
     group = dim.group()
-
     dc.selectMenu("#class-selector")
         .dimension(dim)
         .group(group);
-
 }
-
-//============================================//
-
 
 function show_gender_selector(ndx) {
     dim = ndx.dimension(dc.pluck('sex'));
     group = dim.group()
-
     dc.selectMenu("#gender-selector")
         .dimension(dim)
         .group(group);
-
 }
-
-
-
-//============================================//
 
 function show_average_selector(ndx) {
     dim = ndx.dimension(dc.pluck('survived'));
     group = dim.group()
-
     dc.selectMenu("#average-selector")
         .dimension(dim)
         .group(group);
-
 }
-
-//============================================//
-
 
 function show_age_selector(ndx) {
     dim = ndx.dimension(dc.pluck('age'));
     group = dim.group()
-
     dc.selectMenu("#age-selector")
         .dimension(dim)
         .group(group);
 
 }
 
-//============================================//
 
-
-
-
-
+/*pieCharts for displaying information for classes, gender, age groups and survival rates*/
 
 function show_total_class(ndx) {
     var name_dim = ndx.dimension(dc.pluck('classification'));
     var total_per_class = name_dim.group().reduceSum(dc.pluck('total'));
-
     dc.pieChart('#total-class-piechart')
         .width(200)
         .height(200)
@@ -109,7 +82,6 @@ function show_total_class(ndx) {
 function show_total_sex(ndx) {
     var name_dim = ndx.dimension(dc.pluck('sex'));
     var total_per_sex = name_dim.group().reduceSum(dc.pluck('total'));
-
     dc.pieChart('#total-sex-piechart')
         .width(200)
         .height(200)
@@ -117,14 +89,12 @@ function show_total_sex(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_sex)
-        .colors(d3.scale.ordinal().range(['#1F4B75','#75251F']));
-
+        .colors(d3.scale.ordinal().range(['#1F4B75', '#75251F']));
 }
 
 function show_total_age(ndx) {
     var name_dim = ndx.dimension(dc.pluck('age'));
     var total_per_age = name_dim.group().reduceSum(dc.pluck('total'));
-
     dc.pieChart('#total-age-piechart')
         .width(200)
         .height(200)
@@ -132,14 +102,12 @@ function show_total_age(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_age)
-        .colors(d3.scale.ordinal().range(['#1F7561','#75251F']));
-
+        .colors(d3.scale.ordinal().range(['#1F7561', '#75251F']));
 }
 
 function show_total_survival(ndx) {
     var name_dim = ndx.dimension(dc.pluck('survived'));
     var total_per_survival = name_dim.group().reduceSum(dc.pluck('total'));
-
     dc.pieChart('#total-survival-piechart')
         .width(200)
         .height(200)
@@ -147,9 +115,11 @@ function show_total_survival(ndx) {
         .transitionDuration(1500)
         .dimension(name_dim)
         .group(total_per_survival)
-        .colors(d3.scale.ordinal().range(['#3B2810','#1F7561']));
-
+        .colors(d3.scale.ordinal().range(['#3B2810', '#1F7561']));
 }
+
+
+/*barChart for displaying the gender of humans in each group onboard*/
 
 function show_class_distribution(ndx) {
 
@@ -200,12 +170,12 @@ function show_class_distribution(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .colors(d3.scale.ordinal().range(['#6AA9F6', '#F67D6A', '#F6F16A', '#86F66A']))
-        // .xAxisLabel("Total Percentage of Passengers")
         .legend(dc.legend().x(266).y(19).itemHeight(13).gap(10))
         .margins({ top: 10, right: 100, bottom: 30, left: 30 });
-
 }
 
+
+/*stackedCharts for showing survival rates by class, gender and age*/
 
 function show_survival_by_class(ndx) {
     var name_dim = ndx.dimension(dc.pluck('classification'));
@@ -238,7 +208,6 @@ function show_survival_by_class(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
-    // .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
 
@@ -273,7 +242,6 @@ function show_survival_by_gender(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
-    // .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
 
@@ -313,13 +281,11 @@ function show_survival_by_age(ndx) {
 }
 
 
-
-
+/*rowChart for displaying the amount of humans in each group onboard*/
 
 function show_class_balance_rowchart(ndx) {
     var dim = ndx.dimension(dc.pluck('classification'));
     var group = dim.group();
-
     dc.rowChart("#class-balance-rowchart")
         .width(360)
         .height(270)
@@ -327,16 +293,15 @@ function show_class_balance_rowchart(ndx) {
         .group(group)
         .colors(d3.scale.ordinal().range(['#86F66A', '#F6F16A', '#6AA9F6', '#F67D6A']))
         .xAxis().ticks(4);
-
 }
+
+
+/*numberDisplay; returns the count for currently selected criteria*/
 
 function show_total_onboard(ndx) {
     var totalOnboard = ndx.groupAll().reduceSum(function(d) {
         return d["total"];
     });
-
-
-
     dc.numberDisplay("#show-total-onboard")
         .formatNumber(d3.format("d"))
         .valueAccessor(function(d) {
@@ -345,60 +310,3 @@ function show_total_onboard(ndx) {
         .group(totalOnboard)
         .formatNumber(d3.format(",.0f"));
 }
-
-
-/*
-function show_survival_of_class_correlation(ndx) {
-    var survivedDim = ndx.dimension(dc.pluck("survived"));
-    
-   var minSurvival = survivedDim.bottom(1)[0].survived;
-   var maxSurvival = survivedDim.top(1)[0].survived;
-    
-    var classDim = ndx.dimension(function(d){
-        return [d.total, d.classification];
-    });
-    
-    var classSurvivalGroup = classDim.group();
-    
-    dc.scatterPlot("#show-survival-of-class-correlation")
-    .width(800)
-    .height(400)
-    //.x(d3.scale.ordinal().domain([minSurvival, maxSurvival]))
-   .x(d3.scale.linear().domain([0,1000]))
-    //.x(d3.scale.ordinal())
-    .brushOn(false)
-    .symbolSize(8)
-    .clipPadding(10)
-    .yAxislabel("Survival Rates")
-  
-    .dimension(classDim)
-    .group(classSurvivalGroup);
-    
-}
-
-
-*/
- /* 
-function show_survival_of_class_correlation(ndx) {
-     var scatterDimension = ndx.dimension(dc.pluck('total'));
-    var scatterGroup = scatterDimension.group().reduceSum(function(d) { return [d.total, d.classification, d.survived]; });
-    
-
-// var survivedDim = ndx.dimension(dc.pluck("classification")); 
-// var scatterDimension = ndx.dimension(function(d){ return [d.classification, d.survived]; });
-//   var scatterGroup = scatterDimension.group();
-    
-    dc.scatterPlot("#show-survival-of-class-correlation")
-           .width(1000)
-          .height(200)
-          .dimension(scatterDimension)
-          .group(scatterGroup)
-          .x(d3.scale.ordinal())
-          .y(d3.scale.linear().domain([0,800]))
-          .symbolSize(10)
-          .clipPadding(10);
-       // dc.scatterPlot.yAxis().ticks(5);
-     
-}
-
-*/
