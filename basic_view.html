@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Titanic Basic View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+
+
+    <script type="text/javascript" src="static/js/d3.min.js"></script>
+    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="static/js/dc.min.js"></script>
+    <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graph.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="/index.html">Titanic</a>
+                <a class="navbar-brand" href="/basic_view.html">Basic view</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" onclick="location.reload()">Refresh page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PieCharts -->
+    <div class="container-pie section-style-two">
+        <div class="crew-class-pie">
+            <h3><strong>Crew & Class</strong></h3>
+            <div id="total-class-piechart"></div>
+        </div>
+        <div class="age-pie">
+            <h3><strong>Age Group</strong></h3>
+            <div id="total-age-piechart"></div>
+        </div>
+        <div class="sex-pie">
+            <h3><strong>Gender</strong></h3>
+            <div id="total-sex-piechart"></div>
+        </div>
+        <div class="survival-pie">
+            <h3><strong>Survived</strong></h3>
+            <div id="total-survival-piechart"></div>
+        </div>
+    </div>
+    
+    <!-- NumberBox -->
+    <div class="container-fluid section-style-one">
+        <div class="container-number-box">
+            <div class="number-box" id="show-total-onboard">
+                 <h6>CURRENT COUNT:</h6>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Selectors -->
+    <div class="container-selector">
+        <div class="class-selector" id="selector-box-2">
+            <div><i class="icon fa fa-anchor fa-5x" aria-hidden="true"></i></div>
+            <div id="class-selector"></div>
+        </div>
+        <div class="gender-selector" id="selector-box-1">
+            <div><i class="icon fa fa-venus-mars fa-5x" aria-hidden="true"></i></div>
+            <div id="gender-selector"></div>
+        </div>
+        <div class="age-selector" id="selector-box-2">
+            <div><i class="icon fa fa-users fa-5x" aria-hidden="true"></i></div>
+            <div id="age-selector"></div>
+        </div>
+        <div class="average-selector" id="selector-box-1">
+            <div><i class="icon fa fa-balance-scale fa-5x" aria-hidden="true"></i></div>
+            <div id="average-selector"></div>
+        </div>
+    </div>
+    
+    <!-- RowChart & Distribution BarChart -->
+    <div class="container-row section-style-one">
+        <div class="balance-rowchart">
+            <h4><strong>Total Persons Per Group</strong></h4>
+            <div id="class-balance-rowchart"></div>
+        </div>
+        <div class="distribution">
+            <h4><strong>Gender Across Crew & Class</strong></h4>
+            <div id="class-distribution"></div>
+        </div>
+    </div>
+
+    <!-- Survival BarCharts -->
+    <div class="container-bar section-style-two">
+        <div class="gender-bar">
+            <h4><strong>Survival By Gender</strong></h4>
+            <div id="survival-by-gender"></div>
+        </div>
+        <div class="class-bar">
+            <h4><strong>Survival By Crew & Class</strong></h4>
+            <div id="survival-by-class"></div>
+        </div>
+        <div class="age-bar">
+            <h4><strong>Survival By Age Group</strong></h4>
+            <div id="survival-by-age"></div>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="container-footer-one section-style-one">
+        <div class="footer">
+            <div class="footer-one">
+                <a href="https://en.wikipedia.org/wiki/RMS_Titanic" target="_blank" <i class="fab fa-wikipedia-w"></i></a><strong>
+               Titanic Wiki</strong>
+                <span style="color:#57675D">------------</span>
+                <span>Copyright &copy; 2018, Mark Wilde</span>
+                <span style="color:#57675D">-----------</span>
+                <a href="https://github.com/markwilde33" target="_blank" <i class="fab fa-github-square"></i></a><strong>
+               Github</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Footer -->
+    <footer class="container-footer-two section-style-one">
+        <div class="footer footer-text ">
+            <p><a href="https://en.wikipedia.org/wiki/RMS_Titanic" target="_blank" <i class="fab fa-wikipedia-w"></i></a><strong>
+               Titanic Wiki</strong></p>
+            <p>Copyright &copy; 2018, Mark Wilde</p>
+            <p><a href="https://github.com/markwilde33/CI-project-two" target="_blank" <i class="fab fa-github-square"></i></a><strong>
+               Github</strong></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
