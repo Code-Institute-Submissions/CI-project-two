@@ -1,16 +1,16 @@
 queue()
-    /*Include the Titanic csv file*/ 
+    /* Include the Titanic csv file */ 
     .defer(d3.csv, "data/Titanic.csv")
     .await(makeGraphs);
 
 function makeGraphs(error, titanicData) {
-    /*Create a crossfilter instance*/ 
+    /* Create a crossfilter instance */ 
     var ndx = crossfilter(titanicData);
-
+    /* Parse data */ 
     titanicData.forEach(function(d) {
         d.total = parseInt(d.total);
     });
-    /*Call all functions*/ 
+    /* Call all functions */ 
     show_class_selector(ndx);
     show_gender_selector(ndx);
     show_average_selector(ndx);
@@ -28,7 +28,8 @@ function makeGraphs(error, titanicData) {
     dc.renderAll();
 }
 
-/*selectors for displaying information for classes, gender, survival rates and age groups*/
+
+/* selectors for displaying information for classes, gender, survival rates and age groups */
 
 function show_class_selector(ndx) {
     dim = ndx.dimension(dc.pluck('classification'));
@@ -64,7 +65,7 @@ function show_age_selector(ndx) {
 }
 
 
-/*pieCharts for displaying information for classes, gender, age groups and survival rates*/
+/* pieCharts for displaying information for classes, gender, age groups and survival rates */
 
 function show_total_class(ndx) {
     var name_dim = ndx.dimension(dc.pluck('classification'));
@@ -119,7 +120,7 @@ function show_total_survival(ndx) {
 }
 
 
-/*barChart for displaying the gender of humans in each group onboard*/
+/* barChart for displaying the gender of persons in each group onboard */
 
 function show_class_distribution(ndx) {
 
@@ -175,7 +176,7 @@ function show_class_distribution(ndx) {
 }
 
 
-/*stackedCharts for showing survival rates by class, gender and age*/
+/* stackedCharts for showing survival rates by class, gender and age */
 
 function show_survival_by_class(ndx) {
     var name_dim = ndx.dimension(dc.pluck('classification'));
@@ -281,7 +282,7 @@ function show_survival_by_age(ndx) {
 }
 
 
-/*rowChart for displaying the amount of humans in each group onboard*/
+/* rowChart for displaying the amount of persons in each group onboard */
 
 function show_class_balance_rowchart(ndx) {
     var dim = ndx.dimension(dc.pluck('classification'));
@@ -296,7 +297,7 @@ function show_class_balance_rowchart(ndx) {
 }
 
 
-/*numberDisplay; returns the count for currently selected criteria*/
+/* numberDisplay; returns the count for currently selected criteria */
 
 function show_total_onboard(ndx) {
     var totalOnboard = ndx.groupAll().reduceSum(function(d) {
