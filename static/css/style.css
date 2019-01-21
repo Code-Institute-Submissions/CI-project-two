@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta+Malar:100,200,300,400,500,600,700|Roboto+Slab:100,200,300,400,500,600,700');
 
 
-/*-----------------------------------------------------Body styles*/
+/*---------------------------------------------------------------- Body Styles*/
 
 body,
 html {
@@ -16,8 +16,7 @@ html {
 }
 
 
-
-/*-----------------------------------------------------Font styles*/
+/*------------------------------------------------------------- Heading styles*/
 
 h1,
 h2,
@@ -25,135 +24,32 @@ h3,
 h4,
 h5,
 h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.title-heading{
     font-family: 'Mukta Malar', 'Roboto Slab', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
     color: #fafafa;
+    opacity: 0.9;
 }
 
 
-/*-----------------------------------------------------FontAwesome styles*/
+/*--------------------------------------------------------- FontAwesome Styles*/
 
 .icon,
-i.fa {
+.fa {
     padding-bottom: 5px;
     color: rgb(0, 24, 6, 0.7);
 }
 
-/*-----------------------------------------------------NavBar styles*/
-
-.navbar-fixed {
-    top: 0;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background-color: black;
-    opacity: 0.50;
-
-}
+/*-------------------------------------------------------------- NavBar Styles*/
 
 .navbar {
-    font-size: 20px;
-    color: #fafafa;
-    font-family: 'Mukta Malar', 'Roboto Slab', sans-serif;
-    padding-bottom: 20px;
+    font-family: 'Mukta Malar', sans-serif;
+    font-weight: 700;
 }
 
-.main-nav {
-    list-style-type: none;
-    display: none;
-}
 
-a {
-    color: #fafafa;
-    text-decoration: none !important;
-}
-
-.main-nav li {
-    text-align: center;
-    margin: 10px auto;
-}
-
-.logo {
-    display: inline-block;
-    font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    margin-bottom: 50px;
-    cursor: pointer;
-    color: #fafafa;
-    font-size: 24px;
-}
-
-.navbar-toggle:hover{
-     color: #649AD5;
-      
-      
-}
-
-.active {
-    display: block;
-}
-
- .logo:hover,
-    .nav-link:hover {
-        color: #6AA9F6 !important;
-    }
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
-
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .main-nav li {
-        margin: 0;
-    }
-
-    .nav-link {
-        margin-left: 20px;
-
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-
-    .logo:hover,
-    .nav-link:hover {
-        color: #6AA9F6 !important;
-    }
-}
-
-/*----------------------------------------------------- Section styles*/
+/*------------------------------------------------------------- Section Styles*/
 
 .section-style-one {
     background-color: rgb(0, 24, 6, 0.7);
@@ -164,26 +60,23 @@ a {
 }
 
 
-
-/*-----------------------------------------------------Flexbox parent containers and children*/
-
-/*----------------------------------------------------- Flexbox Number-box*/
+/*----------------------------------------------------------- NumberBox Styles*/
 
 .container-number-box {
     display: flex;
-
+    justify-content: center;
 }
 
 .number-box {
     flex-grow: 1;
 }
 
-/*----------------------------------------------------- Flexbox Selector*/
+
+/*------------------------------------------------------------ Selector Styles*/
 
 .container-selector {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .class-selector,
@@ -194,11 +87,9 @@ a {
     flex-grow: 1;
     min-width: 180px;
     min-height: 150px;
-
     padding-top: 40px;
     padding-left: 50px;
     padding-bottom: 40px;
-
 }
 
 @media(max-width:350px) {
@@ -210,10 +101,7 @@ a {
         min-height: 120px;
         padding-left: 30px;
     }
-
 }
-
-
 
 @media only screen and (min-width: 351px) and (max-width: 567px) {
     .class-selector,
@@ -226,7 +114,6 @@ a {
         width: 23%;
     }
 }
-
 
 @media only screen and (min-width: 568px) and (max-width: 991px) {
     .class-selector,
@@ -244,14 +131,13 @@ a {
     .class-selector {
         padding-left: 90px;
     }
-    
+
     .gender-selector,
     .age-selector,
     .average-selector {
-        padding-left: 50px;
+        padding-left: 80px;
     }
 }
-
 
 @media(min-width:1251px) {
     .class-selector,
@@ -260,13 +146,13 @@ a {
     .average-selector {
         min-width: 300px;
         padding-top: 30px;
-        padding-left: 160px;
+        padding-left: 80px;
         padding-bottom: 50px;
     }
 }
 
 
-/*----------------------------------------------------- Flexbox PieChart*/
+/*------------------------------------------------------------ PieChart Styles*/
 
 .container-pie {
     display: flex;
@@ -286,7 +172,6 @@ a {
 }
 
 @media(max-width:399px) {
-
     .crew-class-pie,
     .sex-pie,
     .age-pie,
@@ -330,23 +215,22 @@ a {
 }
 
 @media(min-width:1251px) {
-
     .crew-class-pie,
     .sex-pie,
     .age-pie,
     .survival-pie {
-        padding-left: 100px;
+        padding-left: 50px;
         padding-bottom: 33px;
     }
 }
 
-/*----------------------------------------------------- Flexbox RowChart & Distribution*/
+
+/*------------------------------------ RowChart & BarChart Distribution Styles*/
 
 .container-row {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .balance-rowchart,
 .distribution {
@@ -366,9 +250,7 @@ a {
         padding-left: 15px;
         padding-bottom: 30px;
     }
-
 }
-
 
 @media only screen and (min-width: 642px) and (max-width: 1100px) {
     .balance-rowchart,
@@ -388,7 +270,6 @@ a {
         min-width: 500px;
         min-height: 400px;
     }
-
 }
 
 @media(min-width:1401px) {
@@ -400,16 +281,14 @@ a {
         min-width: 600px;
         min-height: 400px;
     }
-
 }
 
-/*----------------------------------------------------- Flexbox BarChart*/
+/*--------------------------------------------------  Survival BarChart Styles*/
 
 .container-bar {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .gender-bar,
 .class-bar,
@@ -440,8 +319,6 @@ a {
         padding-left: 160px;
         padding-right: 150px;
         padding-bottom: 50px;
-
-
     }
 }
 
@@ -463,11 +340,11 @@ a {
         padding-bottom: 50px;
         min-width: 400px;
         min-height: 250px;
-
     }
 }
 
-/*----------------------------------------------------- Flexbox Titanic Info*/
+
+/*-------------------------------------------------------- Titanic Info Styles*/
 
 .container-info {
     display: flex;
@@ -476,72 +353,61 @@ a {
 
 .info {
     flex-grow: 1;
-}
-
-/*-----------------------------------------------------Titanic info styles**/
-
-.info {
-    font-family: 'Mukta Malar', sans-serif;
     padding: 10px 20px;
-    font-weight: 500;
-    text: black;
-    text-align: center;
-    color: black;
+    
 }
 
-.info-text {
-    text: black;
+.info-heading {
+    
     text-align: center;
-    color: black;
+    color: #000000;
+    padding-bottom: 15px;
 }
 
-/*----------------------------------------------------- Flexbox Footer*/
+.info-text{
+    font-family: 'Mukta Malar', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+}
+
+/*-------------------------------------------------------------- Footer Styles*/
+
 .container-footer-one,
-.container-footer-two
-{
+.container-footer-two {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.footer-one,
-.footer-two,
-.footer-three {
-    flex-grow: 1;
-   padding: 15px 0px;
-}
-
-@media (max-width: 550px){
-    .container-footer-one { 
-        display : none; 
-        visibility : hidden; 
+@media (max-width: 550px) {
+    .container-footer-one {
+        display: none;
+        visibility: hidden;
     }
 }
 
-@media (min-width: 551px){
-    .container-footer-two { 
-        display : none; 
-        visibility : hidden; 
+@media (min-width: 551px) {
+    .container-footer-two {
+        display: none;
+        visibility: hidden;
     }
 }
-/*-----------------------------------------------------Footer styles*/
 
 .footer {
     font-family: 'Mukta Malar', sans-serif;
     padding: 10px 20px;
     font-weight: 500;
-    text: black;
     text-align: center;
-    color: black;
+    color: #000000;
 }
 
 .footer-text {
-    text: black;
     text-align: center;
-    color: black;
+    color: #000000;
 }
 
-/*-----------------------------------------------------Dc-Chart styles*/
+/*------------------------------------------------------------ Dc-Chart Styles*/
 
 .select,
 .dc-select-menu {
@@ -563,7 +429,7 @@ a {
 
 .dc-chart .axis text {
     fill-opacity: .8;
-    fill: white;
+    fill: #fafafa;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
@@ -571,48 +437,33 @@ a {
 
 .dc-chart .pie-slice {
     fill-opacity: .8;
-    fill: white;
+    fill: #fafafa;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
-
 }
 
 .dc-chart g.row text {
     fill-opacity: .8;
-    fill: white;
+    fill: #fafafa;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
-
 }
 
-.dc-chart g.dc-legend-item text {
+.dc-chart .dc-legend-item text {
     fill-opacity: .8;
-    fill: white;
+    fill: #fafafa;;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
-
 }
 
-.dc-chart rect.bar {
+.dc-chart .bar {
     fill-opacity: .8;
     font-size: 13px;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 500;
-}
-
-.dc-chart p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Roboto Slab", sans-serif;
-    font-weight: 500;
-    opacity: .8;
 }
 
 .dc-chart g.row rect {
@@ -623,7 +474,7 @@ h6 {
 }
 
 
-/*-----------------------------------------------------Parallax styles*/
+/*------------------------------------------------------------ Parallax Styles*/
 
 .parallax-one,
 .parallax-two,
@@ -638,22 +489,22 @@ h6 {
 
 .parallax-one {
     background-image: url('../../img/titanic_at_night.jpg');
-    min-height: 800px;
+    min-height: 600px;
 }
 
 .parallax-two {
     background-image: url('../../img/titanic_propellers.jpg');
-    min-height: 700px;
+    min-height: 300px;
 }
 
 .parallax-three {
     background-image: url('../../img/titanic_at_sea.jpg');
-    min-height: 700px;
+    min-height: 300px;
 }
 
 .parallax-four {
     background-image: url('../../img/titanic_underwater_wreck.jpg');
-    min-height: 700px;
+    min-height: 300px;
 }
 
 .parallax-text {
