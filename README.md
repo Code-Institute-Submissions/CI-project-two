@@ -135,7 +135,7 @@ Several user stories were considered before development began:
 | Page      | Description                                                                                                                                                                                         |
 | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Titanic Home       | The main page which features a collection of data charts informing the Titanic disaster. Also included are various parallax images of the Titanic. It implements scroll spy functionality. There is brief description of the Titanic disaster, a navbar with section links and a refresh button, and a footer.                                 |
-| Basic View     | This page is a stripped down version on the main page. It only displays the data charts, navbar and footer. There is a small; change in the navbar links. As they are all positioned closer together; users can enjoy viewing the interaction across the charts as they click on there various components |
+| Basic View     | This page is a stripped down version on the main page. It only displays the data charts, navbar and footer. There is a small; change in the navbar links. As they are all positioned closer together; users can enjoy viewing the interaction across the charts as they click on there various components. |
 
 
 
@@ -259,6 +259,8 @@ Several user stories were considered before development began:
 11. Verify custom styles are working as intended, for example, the charts should change position across various screen sizes.
 12. Verify that the navbar links change color when the cursor is hovered over them.
 13. Verify that the footer links change color when the cursor hovers over them.
+
+</details> 
 
 
 <details>
