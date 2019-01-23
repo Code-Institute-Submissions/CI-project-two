@@ -35,9 +35,9 @@
 Guidelines for project development:
 
 - Build a data dashboard that visualizes a dataset of your choice.
-- Visualize your data using D3.js and dc.js.
+- Visualize your data using D3.js and DC.js.
 - Create a Single-Page Application.
-- Incorporate links or buttons to allow your user to navigate the site and reset/control the site functionality
+- Incorporate links or buttons to allow your user to navigate the site and reset/control the site functionality.
 - Create a website of around 4-5 pages.
 - Incorporate main navigation and grid layout.
 - Whenever possible, strive to use semantic HTML5 elements to structure your HTML code better.
@@ -56,7 +56,7 @@ Guidelines for project development:
 
 This website provides statistical information about the passengers and crew of the [RMS Titanic](https://en.wikipedia.org/wiki/RMS_Titanic/) in the form of data visualization using open source Javascript libraries.
 
-It is a simplistic static website that's focuses on telling the story of those on board through various data models. It is concerned with four distinct areas:
+It is a simplistic static website that focuses on telling the story of those on board through various data models. It is concerned with four distinct areas:
 
 1. Crew & Classes
 2. Gender
@@ -71,7 +71,7 @@ It is a simplistic static website that's focuses on telling the story of those o
 
 ### Wireframes
 
-[Balsamiq](https://balsamiq.com/) was used to create the wireframes.
+[Pencil](https://pencil.evolus.vn/) was used to create the wireframes.
 
 <details>
       <summary><strong><em>Titanic Home</em></strong></summary>
@@ -86,23 +86,20 @@ It is a simplistic static website that's focuses on telling the story of those o
  
   ![alt="Basic view page mockup"](mockups/basic_view.png)
 </details> 
-
-
-
 ### Design
 
 
 - The website incorporates some parallax images between the data chart sections to give the users a more in depth experience.
 
-- It was decided to include a second basic view page so that users can view the data charts in isolation. They are much closer together in basic view mode. The reasoning behind this decision was that perhaps some users might enjoy seeing the data charts working in unison as they click on the various interactive charts.
+- It was decided to include a second basic view page so that users can view the data charts in isolation. They are much closer together in basic view mode. The reasoning behind this decision was that perhaps some users might enjoy seeing the data charts working in unison as they click on the various interactive components.
 
-- A simple navbar and footer were implemented. The navbar includes scroll spy so that a user can click on a heading and be brought to  that section.The footer includes a link to the titanic wiki page and this websites github repository.
+- A simple navbar and footer were implemented. The navbar includes scroll spy so that a user can click on a heading and be brought to  that section. The footer includes a link to the titanic wiki page and this websites github repository.
 
 - There is a refresh button in the navbar so that users can reset all graphs at any time. They may wish to start over and work through the interactive charts again.
   
 - The Bootstrap framework underpins the project and was implemented as per convention.
 
-- The project implemented D3.js, DC.js, Queue.js and Crossfilter.js to build the data charts .
+- The project implemented D3.js, DC.js, Queue.js and Crossfilter.js to build and display the data charts .
 
 - The websites color scheme and layout were chosen so as to give the website some personality and to make the data charts more visceral and visually appealing.
 
@@ -119,11 +116,11 @@ Several user stories were considered before development began:
 
 2. "As someone who is interested in the Titanic disaster, I would like to view data visualization charts representing key statistics of those onboard, to help me visualize the factors at play; and get a feel for the numbers involved. For example, what was the ratio of men to women? How many third class children survived the disaster?, and so on."
 
-3. "As someone who is interested in the Titanic disaster, I would appreciate having access to a simple, easy to navigate website. Where I can explore some of the key facts underpinning in the disaster.
+3. "As someone who is interested in the Titanic disaster, I would appreciate having access to a simple, easy to navigate website. Where I can explore some of the key facts underpinning the disaster.
  
 4. I would also appreciate some images of the Titanic being displayed on the website, to help ignite my imagination."
 
-5. "I would appreciate a link to further, more in depth information about the titanic, to be included on the website."
+5. "I would appreciate a link to further, more in-depth information about the titanic, to be included on the website."
 
 6. "If possible I would like to feel some enthusiasm while clicking through the data charts and watching them dynamically interact. It is hoped that I may garner insights, or discover a narrative I may not have been aware of, before visiting the website."
 
@@ -134,8 +131,8 @@ Several user stories were considered before development began:
 
 | Page      | Description                                                                                                                                                                                         |
 | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Titanic Home       | The main page which features a collection of data charts informing the Titanic disaster. Also included are various parallax images of the Titanic. It implements scroll spy functionality. There is brief description of the Titanic disaster, a navbar with section links and a refresh button, and a footer.                                 |
-| Basic View     | This page is a stripped down version on the main page. It only displays the data charts, navbar and footer. There is a small; change in the navbar links. As they are all positioned closer together; users can enjoy viewing the interaction across the charts as they click on there various components. |
+| Titanic Home       | The main page which features a collection of data charts informing the Titanic disaster. Also included are various parallax images of the Titanic. It implements scroll spy functionality. There is a brief description of the Titanic disaster, a navbar with section links and a refresh button, and a footer.                                 |
+| Basic View     | This page is a stripped-down version on the main page. It only displays the data charts, navbar and footer. There is a small; change in the navbar links. As they are all positioned closer together; users can enjoy viewing the interaction across the charts as they click on the various components. |
 
 
 
@@ -216,9 +213,9 @@ Several user stories were considered before development began:
 1. Verify a site visitor will be presented with data charts informed by official statistics regarding those onboard.
 2. Verify that a site visitor can view data charts representing key statistics of those onboard, such as the number of third class children who survived the disaster.
 3. Verify that a site visitor has access to a simple, easy to navigate website. Where they may explore some of the key facts underpinning in the disaster.
-4. Verify that potential fans of the band can access some of the bands best material for free.
+4. Verify that a link to further, more in depth information about the titanic is provided.
 5. Verify that a site visitor can observe images of the Titanic, to help ignite their imagination.
-6. Verify that a site visitor has the potential to feel enthusiastic while navigating the charts. And could potentially discover new narratives in their personal understanding of the disaster.
+6. Verify that a site visitor has the potential to feel enthusiastic while navigating the charts, and to discover new narratives in their personal understanding of the disaster.
 
 </details> 
 
@@ -238,7 +235,7 @@ Several user stories were considered before development began:
 7. Verify that the piecharts are displaying and functioning as intended, interacting dynamically with all other charts.
 8.  Verify that the rowchart is displaying and functioning as intended, interacting dynamically with all other charts.
 9. Verify that the barcharts are displaying and functioning as intended, interacting dynamically with all other charts.
-10. Verify that the Titanic info section is displaying as intended, and contains no grammatical errors.
+10. Verify that the Titanic Info section is displaying as intended, and contains no grammatical errors.
 11. Verify that each link in the footer is working as intended, users will be taken to the relevant web page when they click on a link.
 12. Verify that the refresh the page icon in the navbar is working as intended, The page will refresh on one click.
 13. Verify custom styles are working as intended, for example, the charts should change position across various screen sizes.
@@ -273,7 +270,7 @@ Several user stories were considered before development began:
 ### Further Testing
 
 
-- [Google Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/) where used at every stage of production to isolate issues and improve mobile responsiveness.
+- [Google Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools/) was used at every stage of production to isolate issues and improve mobile responsiveness.
 - The app has been tested on various browsers, including Chrome, Firefox, Opera, and Safari.
 - The app was tested across many screen sizes, from very small to very large.
 - Some family members tested the app on their own devices and their recommendations, such as which Titanic images to use, were taken on board.
@@ -327,7 +324,7 @@ This corrected the error and the website loaded as intended.
 from the console type:
 
 $ git clone https://github.com/markwilde33/CI-project-two.git
-$ cd CI-project-one
+$ cd CI-project-two
 
 Open index.html in your web browser.
 
