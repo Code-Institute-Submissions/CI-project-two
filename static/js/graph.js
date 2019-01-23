@@ -29,11 +29,11 @@ function makeGraphs(error, titanicData) {
 }
 
 
-/* selectors for displaying information for classes, gender, survival rates and age groups */
+/* Selectors for displaying information for classes, gender, survival rates and age groups */
 
 function show_class_selector(ndx) {
     dim = ndx.dimension(dc.pluck('classification'));
-    group = dim.group()
+    group = dim.group();
     dc.selectMenu("#class-selector")
         .dimension(dim)
         .group(group);
@@ -41,7 +41,7 @@ function show_class_selector(ndx) {
 
 function show_gender_selector(ndx) {
     dim = ndx.dimension(dc.pluck('sex'));
-    group = dim.group()
+    group = dim.group();
     dc.selectMenu("#gender-selector")
         .dimension(dim)
         .group(group);
@@ -49,7 +49,7 @@ function show_gender_selector(ndx) {
 
 function show_average_selector(ndx) {
     dim = ndx.dimension(dc.pluck('survived'));
-    group = dim.group()
+    group = dim.group();
     dc.selectMenu("#average-selector")
         .dimension(dim)
         .group(group);
@@ -57,7 +57,7 @@ function show_average_selector(ndx) {
 
 function show_age_selector(ndx) {
     dim = ndx.dimension(dc.pluck('age'));
-    group = dim.group()
+    group = dim.group();
     dc.selectMenu("#age-selector")
         .dimension(dim)
         .group(group);
@@ -176,7 +176,7 @@ function show_class_distribution(ndx) {
 }
 
 
-/* stackedCharts for showing survival rates by class, gender and age */
+/* stacked barCharts for showing survival rates by class, gender and age */
 
 function show_survival_by_class(ndx) {
     var name_dim = ndx.dimension(dc.pluck('classification'));
@@ -189,7 +189,7 @@ function show_survival_by_class(ndx) {
         }
     });
 
-    var name_dim = ndx.dimension(dc.pluck('classification'));
+    
     var survivalByClassNo = name_dim.group().reduceSum(function(d) {
         if (d.survived === 'No') {
             return +d.total;
@@ -208,7 +208,7 @@ function show_survival_by_class(ndx) {
         .stack(survivalByClassNo, "Perished")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
+        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
 
@@ -223,7 +223,7 @@ function show_survival_by_gender(ndx) {
         }
     });
 
-    var name_dim = ndx.dimension(dc.pluck('sex'));
+    
     var survivalByGenderNo = name_dim.group().reduceSum(function(d) {
         if (d.survived === 'No') {
             return +d.total;
@@ -242,7 +242,7 @@ function show_survival_by_gender(ndx) {
         .stack(survivalByGenderNo, "Perished")
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']))
+        .colors(d3.scale.ordinal().range(['#00E083', '#E40000']));
     stackedChart.margins({ top: 10, right: 50, bottom: 30, left: 50 });
 }
 
@@ -257,7 +257,7 @@ function show_survival_by_age(ndx) {
         }
     });
 
-    var name_dim = ndx.dimension(dc.pluck('age'));
+    
     var survivalByAgeNo = name_dim.group().reduceSum(function(d) {
         if (d.survived === 'No') {
             return +d.total;
