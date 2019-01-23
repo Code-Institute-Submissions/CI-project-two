@@ -86,6 +86,7 @@ It is a simplistic static website that focuses on telling the story of those on 
  
   ![alt="Basic view page mockup"](mockups/basic_view.png)
 </details> 
+
 ### Design
 
 
